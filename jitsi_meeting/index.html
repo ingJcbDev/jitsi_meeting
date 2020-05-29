@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hola -----------> .l.</title>
+
+<!-- 	<link rel="stylesheet" href="Bootstrap_v4.4.1/css/bootstrap.min.css"> -->
+
+<!-- 	<script type="text/javascript" src="Bootstrap_v4.4.1/js/jquery-3.4.1.slim.min.js"></script>
+	<script type="text/javascript" src="Bootstrap_v4.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Bootstrap_v4.4.1/js/popper.min.js"></script> -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+ 	<script type="text/javascript" src="https://meet.jit.si/external_api.js"></script> 
+
+	<script>
+		//alert(1);
+		$(document).ready(function() {
+		// 	// body...
+		start = function(){
+
+			const domain = 'meet.jit.si';
+			const options = {
+			    roomName: 'PruebaCosmitet',
+			    width: 840,
+			    height: 480,
+			    parentNode: document.querySelector('#meet'),
+			    dispositivos : { 
+			        audioInput : '<deviceLabel>' , 
+			        audioOutput : '<deviceLabel>' , 
+			        videoInput : '<deviceLabel>' 
+			    },
+			    userInfo : { 
+			        email : 'jonier.cabrera@cosmitet.net' , 
+			        displayName : 'Jonier Cabrera' 
+			    },
+ // Whether or not some features are checked based on token.
+    // enableFeaturesBasedOnToken: false,
+
+    // Enable lock room for all moderators, even when userRolesBasedOnToken is enabled and participants are guests.
+    // lockRoomGuestEnabled: false,
+
+    // When enabled the password used for locking a room is restricted to up to the number of digits specified
+    // roomPasswordNumberOfDigits: 10,
+    // default: roomPasswordNumberOfDigits: false,
+
+    // Message to show the users. Example: 'The service will be down for
+    // maintenance at 05:40 PM GMT,
+    // noticeMessage: 'xxxxxxxxxxxxxxxxxxx',
+
+    // Enables calendar integration, depends on googleApiApplicationClientID
+    // and microsoftApiApplicationClientID
+    // enableCalendarIntegration: false,
+
+    // When 'true', it shows an intermediate page before joining, where the user can  configure its devices.
+    // prejoinPageEnabled: false,		
+    
+
+			};
+			const api = new JitsiMeetExternalAPI(domain, options);
+
+			api.executeCommand('displayName', 'New Nickname55555555');
+
+			api.executeCommand('password', 'Password5555555');			
+
+			console.log('------------>:');
+			console.log(api);
+			console.log('------------>:');
+		}
+
+		});
+
+	</script>
+</head>
+<body>
+
+
+
+	<h1>My Jitsi meeting</h1>
+
+<!-- Extra large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl" onclick="start();">Extra large modal</button>
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+
+    	<div class="modal-header">
+	        <h5 class="modal-title">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	     </div>
+
+			 <div id="meet" style="margin-left: 160px;">
+				<!-- ******************************************************************* -->
+			</div>
+
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>         
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="/*start();*/">Large modal</button>
+
+<div class="modal-dialog modal-xl" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<div class="modal-header">
+	        <h5 class="modal-title">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	     </div>
+
+			 <div id="meet">
+				
+			</div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>   	
+    </div>
+  </div>
+</div> -->
+
+
+
+
+</body>
+</html>
